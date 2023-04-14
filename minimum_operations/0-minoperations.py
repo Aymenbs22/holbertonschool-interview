@@ -7,11 +7,13 @@ def minOperations(n):
         return 0
     operations = 0
     chars = 1
+    inc = 0
     while chars < n:
         if n % chars == 0:
+            inc = chars
             operations += 2
-            chars *= 2
+            chars += inc
         else:
             operations += 1
-            chars += chars
+            chars += inc
     return operations
