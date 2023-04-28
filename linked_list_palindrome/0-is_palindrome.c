@@ -11,13 +11,14 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
 	int size = 0, i = 0, j = 0;
+	int *array;
 
 	while (current != NULL)
 	{
 		size++;
 		current = current->next;
 	}
-	int array[size];
+	array = malloc(sizeof(listint_t));
 
 	current = *head;
 	while (current != NULL)
