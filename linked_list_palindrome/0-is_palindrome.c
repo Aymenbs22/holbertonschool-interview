@@ -17,17 +17,17 @@ int is_palindrome(listint_t **head)
 		size++;
 		current = current->next;
 	}
-	int arr[size];
+	int array[size];
 
 	current = *head;
 	while (current != NULL)
 	{
-		arr[i++] = current->n;
+		array[i++] = current->n;
 		current = current->next;
 	}
 	for (j = 0; j < size / 2; j++)
 	{
-		if (arr[j] != arr[size - j - 1])
+		if (array[j] != array[size - j - 1])
 		{
 			return (0);
 		}
