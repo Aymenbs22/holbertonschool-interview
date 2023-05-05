@@ -35,3 +35,20 @@ try:
                 print("{}: {}".format(status, count))
 except Exception:
     pass
+finally:
+            print("File size:", totalsize)
+            count = 1
+            status = 0
+            for i in list:
+                if int(i) not in status_codes:
+                    continue
+                elif status == 0:
+                    status = i
+                elif status != i:
+                    print("{}: {}".format(status, count))
+                    status = i
+                    count = 1
+                else:
+                    count += 1
+            if int(status) in status_codes:
+                print("{}: {}".format(status, count))
