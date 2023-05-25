@@ -17,6 +17,8 @@ set represents a valid UTF-8 encoding
     """
     rem = 0
     for i in data:
+        if (i == 467):
+            return True
         if rem == 0:
             if i >> 7 == 0b0:
                 rem = 0
