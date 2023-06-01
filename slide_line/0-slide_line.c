@@ -10,7 +10,7 @@
 int slide_line(int *line, size_t size, int direction)
 {
 
-    int slideline[size];
+    int slideline[100];
     int i = 0;
     int j = 0;
     int k = 0;
