@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 		size++;
 		current = current->next;
 	}
-	array = malloc(size * 4);
+	array = malloc(sizeof(listint_t));
 
 	current = *head;
 	while (current != NULL)
