@@ -18,6 +18,7 @@ int is_palindrome(listint_t **head)
 		size++;
 		current = current->next;
 	}
+	size = size -4;
 	array = malloc(sizeof(size));
 
 	current = *head;
