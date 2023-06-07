@@ -11,11 +11,5 @@
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
     if (grid1 == NULL)
-    {
-        return (0);
-    }
     if (grid2 == NULL)
-    {
-        return (0);
-    }
 }
