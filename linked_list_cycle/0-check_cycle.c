@@ -12,7 +12,7 @@ int check_cycle(listint_t *list)
 	listint_t *onestep = list;
 	listint_t *twostep = list;
 
-	while (onestep && twostep && onestep->next && twostep->next->next != NULL)
+	while (onestep && twostep && onestep->next && twostep->next && twostep->next->next != NULL)
 	{
 		onestep = onestep->next;
 		twostep = twostep->next->next;
