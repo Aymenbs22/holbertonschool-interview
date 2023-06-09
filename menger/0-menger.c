@@ -34,7 +34,7 @@ tmp2 /= 3;
 }
 if (b == true)
 printf(" ");
-else 
+else
 printf("#");
 }
 printf("\n");
