@@ -30,13 +30,13 @@ return (new_node);
 */
 avl_t *sortArrayToAVL(int *array, int start, int end)
 {
+avl_t *newnode;
+int middle = (start + end) / 2;
+
 if (start > end)
 {
 return (NULL);
 }
-int middle = (start + end) / 2;
-
-avl_t *newnode;
 
 newnode = binary_tree_node(NULL, array[middle]);
 
