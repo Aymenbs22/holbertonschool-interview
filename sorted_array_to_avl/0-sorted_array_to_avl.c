@@ -39,6 +39,8 @@ return (NULL);
 }
 
 newnode = binary_tree_node(NULL, array[middle]);
+if (newnode == NULL)
+return (NULL);
 
 newnode->left = sortArrayToAVL(array, start, middle - 1);
 
