@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const url = 'https://swapi-api.hbtn.io/api/films/';
 const request = require('request');
 
