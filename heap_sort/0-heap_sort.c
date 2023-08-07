@@ -49,7 +49,7 @@ void heap_sort(int *array, size_t size)
 	}
 }
 /**
- * swap - swap function
+ * swap - function to swap
  * @a: a
  * @b: b
 */
