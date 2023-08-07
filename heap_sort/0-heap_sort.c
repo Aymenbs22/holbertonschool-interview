@@ -33,12 +33,14 @@ void heapify(int *array, int k, int i, int size)
 */
 void heap_sort(int *array, size_t size)
 {
+	int i;
+
 	if (array && size)
 	{
-	for (int i = size / 2 - 1; i >= 0; i--)
+	for (i = size / 2 - 1; i >= 0; i--)
 		heapify(array, size, i, size);
 
-	for (int i = size - 1; i > 0; i--)
+	for (i = size - 1; i > 0; i--)
 	{
 		swap(&array[0], &array[i]);
 		print_array(array, size);
