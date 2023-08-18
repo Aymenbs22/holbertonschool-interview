@@ -92,16 +92,18 @@ heap_t *get_last(heap_t *root)
 int heap_extract(heap_t **root)
 {
 	heap_t *lastnode;
+	int value = 0;
+	int tmp = 0;
 
 	if (*root == NULL)
 		return (0);
 
-	int value = (*root)->n;
+	value = (*root)->n;
 
 	if ((*root)->left && (*root)->right != NULL)
 	{
 		lastnode = get_last(*root);
-		int tmp = (*root)->n;
+		tmp = (*root)->n;
 		(*root)->n = lastnode->n;
 		lastnode->n = tmp;
 		if (lastnode->parent != NULL)
