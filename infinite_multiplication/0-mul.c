@@ -106,6 +106,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	if (*number1 == '0' || *number2 == '0')
+	{
+		_puts("0");
+		return (0);
+	}
+
 	result = mul(argv[1], argv[2]);
 
 	if (result[0] == '0')
