@@ -98,6 +98,7 @@ int main(int argc, char *argv[])
 {
 	char *number1 = argv[1];
 	char *number2 = argv[2];
+	char *result = NULL;
 
 	if (argc != 3 || !_isdigit(number1) || !_isdigit(number2))
 	{
@@ -105,7 +106,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	char *result = mul(argv[1], argv[2]);
+	result = mul(argv[1], argv[2]);
 
 	if (result[0] == '0')
 		_puts(result + 1);
