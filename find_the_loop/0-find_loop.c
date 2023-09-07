@@ -5,13 +5,12 @@
 /**
  * find_listint_loop - function that finds the loop in a linked list.
  * @head: the head of the listable list
- * Return: Null or hd.
+ * Return: Null or fast.
 */
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *slow = head;
 	listint_t *fast = head;
-	listint_t *hd = head;
 
 	if (head == NULL)
 		return (NULL);
@@ -24,14 +23,20 @@ listint_t *find_listint_loop(listint_t *head)
 		slow = slow->next;
 		fast = fast->next->next;
 		if (slow == fast)
-		{
-			while (slow != hd)
-			{
-			slow = slow->next;
-			hd = hd->next;
+			break;
 	}
-		return (hd);
+	if (slow != fast)
+	{
+		return (NULL);
 	}
-}
+
+	fast = head;
+	while (fast != slow)
+	{
+		slow = slow->next;
+		fast = fast->next;
+	}
+
+		return (fast);
 	return (NULL);
 }
