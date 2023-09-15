@@ -63,7 +63,8 @@ void merge_sort(int *array, size_t size)
 		size_t j;
 		int l = size / 2;
 		int r = size - l;
-		int left[l], right[r];
+		int left[l];
+		int right[r];
 
 		if (!array)
 			return;
