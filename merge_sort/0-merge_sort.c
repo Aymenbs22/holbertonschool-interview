@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
+#define SIZE 99999
 /**
  * merge - sorts an array in ascending order the Merge Sort algorithm
  * @arr: an array of integers
@@ -61,10 +62,8 @@ void merge_sort(int *array, size_t size)
 		size_t mid = size / 2;
 		size_t i;
 		size_t j;
-		int l = size / 2;
-		int r = size - l;
-		int left[l];
-		int right[r];
+		int left[SIZE];
+		int right[SIZE];
 
 		if (!array)
 			return;
