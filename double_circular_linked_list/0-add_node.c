@@ -57,6 +57,11 @@ List *add_node_begin(List **list, char *str)
 	}
 	new_node->str = strdup(str);
 
+	if (new_node->str == NULL)
+	{
+		return (NULL);
+	}
+
 
 	if (!*list)
 	{
