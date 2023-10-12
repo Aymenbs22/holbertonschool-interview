@@ -35,14 +35,14 @@ void count_Sort(int *array, int size, int pos)
 */
 void radix_sort(int *array, size_t size)
 {
+	int max;
+	size_t i;
+	int pos;
+
 	if (array == NULL || size == 0)
 	{
 		return;
 	}
-
-	int max;
-	size_t i;
-	int pos;
 
 	max = array[0];
 	max = array[0];
