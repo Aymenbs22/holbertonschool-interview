@@ -10,7 +10,7 @@ void count_Sort(int *array, int size, int pos)
 
 	int i;
 	int *output = malloc(size * sizeof(int));
-	int *count = malloc(size * sizeof(int));
+	int count[10] = { 0 };
 
 	for (i = 0; i < size; i++)
 		count[(array[i] / pos) % 10]++;
