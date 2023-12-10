@@ -8,7 +8,9 @@ def isWinner(x, nums):
     for i in range(x):
         res ^= nums[i]
 
-    if (res == 0 or x % 2 == 0):
+    if (res == 0 or x % 2 != 0):
         return "Maria"
-    else:
+    elif (res == 0 or x % 2 == 0):
         return "Ben"
+    else:
+        return None
