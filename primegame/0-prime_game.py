@@ -3,7 +3,7 @@
 
 
 def isWinner(x, nums):
-
+    """Prime Game"""
     res = 0
     for i in range(x):
         res ^= nums[i]
